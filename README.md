@@ -1,46 +1,27 @@
-# Getting Started with Create React App
+## Link to front-end (Demo)
+Coming soon!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+### App Summary
+1. A full-stack digital platform for new volunteer signups along with a CRM dashboard to enable staff to administer new programs and enrol new volunteers.
+2. This is a pro-bono project done to help a local charity organization to administer volunteers' signup, as well as manage its programs more efficiently. A simple process streamlining was performed to migrate some of the manual taskes commonly performed by staff to a digital platform.
+3. Tech stacks - ReactJS with TypeScript, React Query, Tailwind CSS, Spring-Boot and Spring Security + Firebase Auth.
+4. Deployment pipeline - GitHub, AWS code pipeline and AWS MySql RDS.
+5. App in test environment (on port 8080) is using H2 in-memory database. 
 
-## Available Scripts
 
-In the project directory, you can run:
+### Relational Diagrams
+![My Image](RelationalDiagrams.png)
 
-### `npm start`
+### Authentication & Authorization Flow between front-end and backend
+1. Firebase Auth for authentication and authorization.
+2. Setup Security Filter Chain and Firbase filter to verify all requests which require JWT token.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![My Image](Auth_process.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Team Members
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Jonathan](https://github.com/goodwill80 "jonathan's github")
+- [Ace](https://github.com/acetay "ace's github")
+- [Yingwang](https://github.com/shiywsg "yingwang's github")
+- [Claire](https://github.com/clairetkw "claire's github")
