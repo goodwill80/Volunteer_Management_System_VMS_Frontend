@@ -12,6 +12,7 @@ Live Link coming soon!
 3. Tech stacks - ReactJS with TypeScript, React Query, Tailwind CSS, Spring-Boot and Spring Security + Firebase Auth.
 4. Deployment pipeline - GitHub, AWS code pipeline and AWS MySql RDS.
 5. App in test environment (on port 8080) is using H2 in-memory database. 
+6. For backend repository, refer to https://github.com/goodwill80/Volunteer_Management_System_VMS_Backend
 
 
 ## Screenshots (Proof-of-concept)
