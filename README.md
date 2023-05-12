@@ -3,6 +3,9 @@ Live Link coming soon!
 
 ## Screenshots 
 
+### Home Page:
+![My Image](HomePage.png)
+
 ### Volunteer Signup:
 ![My Image](SignupPage.png)
 
