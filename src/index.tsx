@@ -41,7 +41,7 @@ root.render(
           <AuthContextProvider>
             <App />
           </AuthContextProvider>
-          <ReactQueryDevtools />
+          {/* <ReactQueryDevtools /> */}
         </QueryClientProvider>
       </ThemeProvider>
     </StyledEngineProvider>
