@@ -1,3 +1,7 @@
+## Steps to start app in test environment
+1. RUN < [docker run -p 8080:8080 goodwill80/vms-springboot:v1.0.1](#) > in command line to start backend server on port 8080. (PLEASE DO THIS FIRST!)
+2. Go to https://illustrious-sopapillas-a57f5b.netlify.app
+
 ## Link to front-end (Demo)
 Live Link coming soon!
 
