@@ -6,7 +6,7 @@ Live Link coming soon!
 ### Volunteer Signup:
 ![My Image](SignupPage.png)
 
-### Volunteer's Calendar and Schduler:
+### Volunteer's Calendar and Scheduler:
 ![My Image](VolunteerScheduler.png)
 
 ### Admin Dashboard:
