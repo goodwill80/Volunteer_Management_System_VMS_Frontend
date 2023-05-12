@@ -1,6 +1,15 @@
 ## Link to front-end (Demo)
 Live Link coming soon!
 
+## Description
+### App Summary
+1. A full-stack digital platform for new volunteer signups along with a CRM dashboard to enable staff to administer new programs and enrol new volunteers.
+2. This is a pro-bono project done to help a local charity organization to administer volunteers' signup, as well as manage its programs more efficiently. A simple process streamlining was performed to migrate some of the manual taskes commonly performed by staff to a digital platform.
+3. Tech stacks - ReactJS with TypeScript, React Query, Tailwind CSS, Spring-Boot and Spring Security + Firebase Auth.
+4. Deployment pipeline - GitHub, AWS code pipeline and AWS MySql RDS.
+5. App in test environment (on port 8080) is using H2 in-memory database. 
+
+
 ## Screenshots 
 
 ### Home Page:
@@ -22,13 +31,6 @@ Live Link coming soon!
 ![My Image](VolunteerProfilePage.png)
 
 
-## Description
-### App Summary
-1. A full-stack digital platform for new volunteer signups along with a CRM dashboard to enable staff to administer new programs and enrol new volunteers.
-2. This is a pro-bono project done to help a local charity organization to administer volunteers' signup, as well as manage its programs more efficiently. A simple process streamlining was performed to migrate some of the manual taskes commonly performed by staff to a digital platform.
-3. Tech stacks - ReactJS with TypeScript, React Query, Tailwind CSS, Spring-Boot and Spring Security + Firebase Auth.
-4. Deployment pipeline - GitHub, AWS code pipeline and AWS MySql RDS.
-5. App in test environment (on port 8080) is using H2 in-memory database. 
 
 
 ### Relational Diagrams
