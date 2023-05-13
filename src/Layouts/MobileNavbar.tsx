@@ -40,6 +40,7 @@ function MobileNavbar() {
             redirect('/signin');
           }
         });
+      setOpenSidebar(false);
     } catch (err) {
       console.log(err);
     }
