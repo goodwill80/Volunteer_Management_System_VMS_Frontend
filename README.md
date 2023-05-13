@@ -5,7 +5,7 @@
 2. Go to https://illustrious-sopapillas-a57f5b.netlify.app
 3. Mock credentials for testing:
 - Admin - (username - "admin@gmail.com", password - "password")
-- Volunteer - (username - "user3@gmail.com", password - "password")
+- Volunteer - (username - "user@gmail.com", password - "password")
 
 ## Link to front-end (Demo)
 Live Link coming soon!
