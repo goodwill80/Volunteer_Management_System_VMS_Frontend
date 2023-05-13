@@ -140,7 +140,7 @@ function Navbar() {
 
           {/* Links on the right of Navbar */}
           <Stack direction="row" spacing={2} className="hidden md:flex">
-            {authUser ? (
+            {(authUser && isAdmin) || (authUser && isUser) ? (
               checkForCredentials()
             ) : (
               <>

@@ -101,7 +101,7 @@ function MobileNavbar() {
         <nav className="mt-12">
           <div className="flex flex-col">
             <div className="flex flex-col justify-center items-center space-y-4">
-              {authUser ? (
+              {(authUser && isAdmin) || (authUser && isUser) ? (
                 checkForCredentials()
               ) : (
                 <>
