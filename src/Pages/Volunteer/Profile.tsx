@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useGlobalAuthContext } from '../../Context/AuthContext';
 import { useQuery } from '@tanstack/react-query';
 import Spinner from '../../Assets/spinner.gif';
@@ -55,7 +55,7 @@ function Profile() {
   const {
     data: volunteer,
     isLoading: volunteerIsLoading,
-    isError: volunteerIsError,
+    // isError: volunteerIsError,
   } = useQuery({
     queryKey: ['volunteer', id, authUser?.accessToken],
     queryFn: () => getVolunteerById(id, authUser?.accessToken),

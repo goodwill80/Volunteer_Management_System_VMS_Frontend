@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MdAddAPhoto } from 'react-icons/md';
+// import { MdAddAPhoto } from 'react-icons/md';
 import { useGlobalAuthContext } from '../../../Context/AuthContext';
 
 type Props = {
@@ -20,6 +20,12 @@ function Profile_image({ photo, name, date, setStatusMsg }: Props) {
   useEffect(() => {
     if (authUser?.photoURL) {
       setPhotoUrl(() => authUser?.photoURL);
+    } else {
+      setPhotoUrl(() =>
+        photo === '' || !photo
+          ? 'https://st4.depositphotos.com/4329009/19956/v/450/depositphotos_199564354-stock-illustration-creative-vector-illustration-default-avatar.jpg'
+          : photo
+      );
     }
   }, [authUser]);
 
@@ -38,7 +44,7 @@ function Profile_image({ photo, name, date, setStatusMsg }: Props) {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative -z-10">
+      <div className="relative -z-10 w-[170px] h-[170px] rounded-full bg-slate-200">
         <img
           className="w-[170px] h-[170px] rounded-full"
           src={photoUrl}
