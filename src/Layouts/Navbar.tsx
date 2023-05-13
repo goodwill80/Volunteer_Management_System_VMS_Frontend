@@ -27,8 +27,15 @@ import { AiFillInstagram } from 'react-icons/ai';
 
 function Navbar() {
   const redirect = useNavigate();
-  const { signout, authUser, setIsLoggedIn, setIsAdmin, userId } =
-    useGlobalAuthContext();
+  const {
+    signout,
+    authUser,
+    setIsLoggedIn,
+    setIsAdmin,
+    userId,
+    setOpenSidebar,
+    openSidebar,
+  } = useGlobalAuthContext();
 
   // Redirect function for links
   const linkTo = (href: string) => {
@@ -93,7 +100,7 @@ function Navbar() {
   };
 
   return (
-    <Container className="block" disableGutters>
+    <Container className="block z-10" disableGutters>
       <AppBar position="fixed" color={'inherit'}>
         <Box className="bg-blue-600 h-[40px] flex justify-between items-center px-5 sm:px-10 md:px-15 py-1">
           <div className="flex justify-center items-center">
@@ -157,7 +164,11 @@ function Navbar() {
               </Link>
             </div>
           </Stack>
-          <Stack direction={'row'} className="md:hidden cursor-pointer">
+          <Stack
+            onClick={() => setOpenSidebar(!openSidebar)}
+            direction={'row'}
+            className="md:hidden cursor-pointer"
+          >
             <RxHamburgerMenu size={30} color={'darkblue'} />
           </Stack>
         </Toolbar>

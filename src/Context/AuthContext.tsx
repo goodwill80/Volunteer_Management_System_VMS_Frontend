@@ -41,6 +41,8 @@ interface ContextType {
   ) => void;
   isImageLoading: boolean;
   setIsImageLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  openSidebar: boolean;
+  setOpenSidebar: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const AuthContext = createContext({} as ContextType);
@@ -67,6 +69,7 @@ function AuthContextProvider({ children }: ContextChildrenType) {
   );
   const [tempForm, setTempForm] =
     useState<typeof FormInitialState>(FormInitialState);
+  const [openSidebar, setOpenSidebar] = useState<boolean>(false);
 
   // Get access Info from firebase
   useEffect(() => {
@@ -141,6 +144,8 @@ function AuthContextProvider({ children }: ContextChildrenType) {
     uploadProfileImage,
     isImageLoading,
     setIsImageLoading,
+    openSidebar,
+    setOpenSidebar,
   };
 
   return <AuthContext.Provider value={ctx}>{children}</AuthContext.Provider>;
