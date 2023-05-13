@@ -106,6 +106,7 @@ function AuthContextProvider({ children }: ContextChildrenType) {
 
   // 2. Firebase = Sign in Existing user
   const signInUserWithPwAndEmail = (email: string, password: string) => {
+    console.log('FirebaseSignin');
     return signInWithEmailAndPassword(auth, email, password);
   };
 

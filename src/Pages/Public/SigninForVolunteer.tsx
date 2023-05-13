@@ -58,20 +58,24 @@ function SigninForVolunteer() {
       timeout();
       return;
     }
-    try {
-      setIsLoading(() => true);
-      signInUserWithPwAndEmail(form.email, form.password);
-      setForm(initialState);
-      storage.set('isLoggedIn', true);
-      setIsLoggedIn(true);
-    } catch (err: any) {
-      setErrorMsg(err?.message);
-      timeout();
-      setIsUser(false);
-      window.localStorage.clear();
-      setIsLoading(false);
-      signout();
-    }
+
+    setIsLoading(() => true);
+    signInUserWithPwAndEmail(form.email, form.password)
+      .then(() => {
+        setForm(initialState);
+        storage.set('isLoggedIn', true);
+        setIsLoggedIn(true);
+        console.log('component signin');
+      })
+      .catch((err) => {
+        console.log('unreachable zone');
+        setIsLoading(false);
+        setErrorMsg(err?.message);
+        timeout();
+        setIsUser(false);
+        window.localStorage.clear();
+        signout();
+      });
   };
 
   // React Query - Function call to signin user in Springboot
@@ -87,6 +91,7 @@ function SigninForVolunteer() {
       redirect(`/volunteer/profile/${id}`);
     },
     onError: (err: any) => {
+      console.log(err);
       setErrorMsg(err?.message);
       timeout();
       setIsUser(false);

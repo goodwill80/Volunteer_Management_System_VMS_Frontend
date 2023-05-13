@@ -45,25 +45,30 @@ function SigninForAdmin() {
   // Timeout
   const timeout = () => setTimeout(() => setErrorMsg(() => ''), 3000);
 
-  const onSubmitHandler = async (e: React.SyntheticEvent) => {
+  const onSubmitHandler = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (form.email === '' || form.password === '') {
       setErrorMsg('Please input all fields above');
       timeout();
       return;
     }
-    try {
-      setIsLoading(true);
-      await signInUserWithPwAndEmail(form.email, form.password)
-        .then(() => {
-          storage.set('isLoggedIn', true);
-          setIsLoggedIn(true);
-        })
-        .then(() => setForm(initialState));
-    } catch (err: any) {
-      setErrorMsg(err?.message);
-      timeout();
-    }
+
+    setIsLoading(true);
+    signInUserWithPwAndEmail(form.email, form.password)
+      .then(() => {
+        storage.set('isLoggedIn', true);
+        setIsLoggedIn(true);
+      })
+      .then(() => setForm(initialState))
+      .catch((err) => {
+        setErrorMsg(err?.message);
+        timeout();
+        setIsLoggedIn(false);
+        setIsAdmin(false);
+        setIsLoading(false);
+        window.localStorage.clear();
+        signout();
+      });
   };
 
   // React Query
