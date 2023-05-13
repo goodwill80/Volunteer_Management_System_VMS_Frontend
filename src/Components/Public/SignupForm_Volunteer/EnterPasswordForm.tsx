@@ -5,6 +5,7 @@ import FormLogo from '../Reusables/FormLogo';
 import { BsFillSkipBackwardBtnFill } from 'react-icons/bs';
 import { useGlobalAuthContext } from '../../../Context/AuthContext';
 import { createNewVolunteer } from '../../../CustomHooks/ApiActions';
+import Signal from '../../../Assets/signal.gif';
 import {
   CredentialType,
   FormInitialState,
@@ -16,6 +17,7 @@ function EnterPasswordForm() {
     useGlobalAuthContext();
   const [form, setForm] = useState<CredentialType>({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [isProcessing, setIsProcessing] = useState<boolean>(false);
 
   // OnChange Form
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -27,6 +29,7 @@ function EnterPasswordForm() {
     e.preventDefault();
     if (form.email === '' || form.password === '') return;
     createUserWithPwAndEmail(form.email, form.password);
+    setIsProcessing(true);
   };
 
   // Event Listener to confirm if uid is generated
@@ -37,11 +40,21 @@ function EnterPasswordForm() {
       };
       createNew();
       setTempForm(FormInitialState);
+      setIsProcessing(false);
       redirect('/signin');
     } else {
       console.log('UID not found');
     }
   }, [authUser]);
+
+  if (isProcessing) {
+    return (
+      <div className="h-[75vh] flex flex-col justify-center items-center">
+        <img className="h-[300px] w-[300px]" src={Signal} alt="Loading" />
+        <p className="font-bold">Processing...</p>
+      </div>
+    );
+  }
 
   return (
     <>
