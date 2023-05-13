@@ -107,7 +107,7 @@ function SigninForVolunteer() {
     );
   }
   return (
-    <div className="flex flex-col mt-28 w-[100%] h-auto md:h-[75vh] justify-center items-center">
+    <div className="flex flex-col py-8 mt-28 w-[100%] h-auto md:h-[75vh] justify-center items-center">
       <div className="flex flex-col justify-center items-center lg:mt-8 space-y-2 p-6 py-4 px-12 border border-gray-200 rounded-md shadow-lg">
         <IntroHeader />
         <div className="flex flex-col justify-center items-center w-full">

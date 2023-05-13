@@ -7,7 +7,7 @@ interface Prop {
 
 function Layout({ children }: Prop) {
   return (
-    <div className="flex flex-col justify-between h-auto min-h-[75vh] md:h-full relative">
+    <div className="flex flex-col justify-between h-auto min-h-[75vh] md:h-auto relative">
       <Navbar />
       {children}
       {/* <Footer /> */}

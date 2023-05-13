@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.h-screen {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+
 .react-calendar {
   width: 350px;
   max-width: 100%;

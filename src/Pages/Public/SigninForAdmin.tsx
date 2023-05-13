@@ -114,7 +114,7 @@ function SigninForAdmin() {
   }
 
   return (
-    <div className="flex flex-col mt-28 w-[100%] h-auto md:h-[75vh] justify-center items-center">
+    <div className="flex flex-col py-8 mt-28 w-[100%] h-auto md:h-[75vh] justify-center items-center">
       <div className="flex flex-col justify-center items-center lg:mt-8 space-y-4 p-6 py-10 px-12 border border-gray-200 rounded-md shadow-lg">
         <IntroHeader />
         <SigninAdminForm
