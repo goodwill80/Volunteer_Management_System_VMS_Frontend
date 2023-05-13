@@ -67,6 +67,10 @@ function SigninForVolunteer() {
     } catch (err: any) {
       setErrorMsg(err?.message);
       timeout();
+      setIsUser(false);
+      window.localStorage.clear();
+      setIsLoading(false);
+      signout();
     }
   };
 
