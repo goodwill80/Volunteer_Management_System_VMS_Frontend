@@ -112,8 +112,9 @@ function SigninForAdmin() {
 
   if (isLoading) {
     return (
-      <div className="h-[75vh] flex justify-center items-center">
+      <div className="h-[75vh] flex flex-col justify-center items-center">
         <img className="h-[300px] w-[300px]" src={Spinner} alt="Loading" />
+        <p className="font-bold">We are processing your request...</p>
       </div>
     );
   }
