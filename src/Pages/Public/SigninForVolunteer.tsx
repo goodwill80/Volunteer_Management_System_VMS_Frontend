@@ -65,10 +65,9 @@ function SigninForVolunteer() {
         setForm(initialState);
         storage.set('isLoggedIn', true);
         setIsLoggedIn(true);
-        console.log('component signin');
+        // console.log('component signin');
       })
       .catch((err) => {
-        console.log('unreachable zone');
         setIsLoading(false);
         setErrorMsg(err?.message);
         timeout();

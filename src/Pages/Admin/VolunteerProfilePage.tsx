@@ -45,9 +45,9 @@ function VolunteerProfilePage() {
   const { data: availabilities } = useQuery({
     queryKey: ['availabilities', id, authUser?.accessToken],
     queryFn: () => getAvailabilitiesOfVolunteer(id, authUser?.accessToken),
-    onSuccess: (data) => {
-      console.log(data);
-    },
+    // onSuccess: (data) => {
+    //   console.log(data);
+    // },
     onError: (err: any) => {
       reload(err, authUser);
     },

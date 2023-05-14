@@ -74,7 +74,7 @@ function AuthContextProvider({ children }: ContextChildrenType) {
   // Get access Info from firebase
   useEffect(() => {
     const listenToAuth = onAuthStateChanged(auth, (currentUser: any) => {
-      console.log(currentUser?.accessToken);
+      // console.log(currentUser?.accessToken);
       setAuthUser(currentUser);
     });
     return () => {
@@ -109,7 +109,7 @@ function AuthContextProvider({ children }: ContextChildrenType) {
 
   // 2. Firebase = Sign in Existing user
   const signInUserWithPwAndEmail = (email: string, password: string) => {
-    console.log('FirebaseSignin');
+    // console.log('FirebaseSignin');
     return signInWithEmailAndPassword(auth, email, password);
   };
 
