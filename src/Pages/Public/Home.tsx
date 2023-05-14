@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <div className="w-auto h-full py-24 px-12 border border-black">
-        <div className="flex flex-col space-x-8 xl:flex-row justify-center items-center ">
+        <div className="flex flex-col space-x-12 xl:flex-row justify-center items-center">
           <HomeHeroHeader />
           <HomeHeroImage />
         </div>
