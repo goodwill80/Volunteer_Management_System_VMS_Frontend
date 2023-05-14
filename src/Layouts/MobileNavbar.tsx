@@ -51,21 +51,27 @@ function MobileNavbar() {
     if (isAdmin) {
       return (
         <>
+          <Button onClick={() => redirect('/')} color="inherit">
+            Home
+          </Button>
           <Button onClick={() => redirect('/admin/dashboard')} color="inherit">
             My Dashboard
           </Button>
           <Button onClick={() => redirect('/admin/programs')} color="inherit">
             Programs
           </Button>
-          <Button onClick={logoutUser} color="inherit">
-            Logout
-          </Button>
+          <button onClick={logoutUser} className="btn btn-sucess btn-sm">
+            Sign out
+          </button>
         </>
       );
     }
     if (isUser) {
       return (
         <>
+          <Button onClick={() => redirect('/')} color="inherit">
+            Home
+          </Button>
           <Button
             onClick={() => redirect(`/volunteer/profile/${id}`)}
             color="inherit"
@@ -106,6 +112,9 @@ function MobileNavbar() {
                 checkForCredentials()
               ) : (
                 <>
+                  <Button onClick={() => redirect('/')} color="inherit">
+                    Home
+                  </Button>
                   <Button
                     onClick={() => redirect('/admin/signin')}
                     color="inherit"
