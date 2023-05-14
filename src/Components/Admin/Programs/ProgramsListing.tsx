@@ -21,8 +21,16 @@ function ProgramsListing({
   isFetched,
 }: Props) {
   const [loading, setLoading] = useState(false as boolean);
+  const [loadingMsg, setLoadingMsg] = useState('' as string);
   const dateReformatter = (date: string) => {
     return new Date(date.split('-').reverse().join('-'));
+  };
+
+  const loadMessage = () => {
+    setLoadingMsg(() => 'Processing...');
+    setTimeout(() => {
+      setLoadingMsg(() => 'Still processing and cannot any results!');
+    }, 5000);
   };
 
   const today = new Date();
@@ -69,19 +77,28 @@ function ProgramsListing({
     <>
       <div className="flex justify-center items-center pb-4 space-x-2">
         <button
-          onClick={() => filterOptions('ALL')}
+          onClick={() => {
+            loadMessage();
+            filterOptions('ALL');
+          }}
           className="btn btn-primary btn-sm"
         >
           All Programs
         </button>
         <button
-          onClick={() => filterOptions('ACTIVE')}
+          onClick={() => {
+            loadMessage();
+            filterOptions('ACTIVE');
+          }}
           className="btn btn-success text-white btn-sm"
         >
           Active Programs
         </button>
         <button
-          onClick={() => filterOptions('CLOSED')}
+          onClick={() => {
+            loadMessage();
+            filterOptions('CLOSED');
+          }}
           className="btn text-white btn-error btn-sm"
         >
           Closed Programs
@@ -93,9 +110,10 @@ function ProgramsListing({
           <div
             className={`${
               !loading ? 'hidden' : 'flex'
-            } h-[50vh] justify-center items-center`}
+            } h-[50vh] flex flex-col justify-center items-center`}
           >
             <img className="h-[300px] w-[300px]" src={Spinner} alt="Loading" />
+            <p className="font-bold text-md text-purple-400">{loadingMsg}</p>
           </div>
           <div
             className={`${
