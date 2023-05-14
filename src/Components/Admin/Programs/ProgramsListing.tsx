@@ -29,8 +29,10 @@ function ProgramsListing({
   const loadMessage = () => {
     setLoadingMsg(() => 'Processing...');
     setTimeout(() => {
-      setLoadingMsg(() => 'Still processing and cannot any results!');
-    }, 5000);
+      setLoadingMsg(
+        () => 'Still processing. Please check your search criteria again!'
+      );
+    }, 4000);
   };
 
   const today = new Date();
